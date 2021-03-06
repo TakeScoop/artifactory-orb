@@ -12,6 +12,7 @@ jobs:
     docker:
       - image: circleci/node:14
     steps:
+      - artifactory/configure
       - artifactory/npm-auth
       - run: npm publish
 
